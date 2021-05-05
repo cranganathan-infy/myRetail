@@ -1,0 +1,43 @@
+File starterFile = new File("config/codenarc/StarterRuleSet-AllRulesByCategory.groovy.txt")
+
+ruleset {
+	description "CodeNarc Test Ruleset"
+	ruleset("file:${starterFile.path}") {
+		ClassJavadoc(enabled: false)
+		UnnecessaryGString(enabled: false)
+		UnnecessaryReturnKeyword(enabled: false)
+		IfStatementBraces(enabled: false)
+		FactoryMethodName(enabled: false)
+		NoDef(enabled: false)
+		SpaceAroundMapEntryColon(characterAfterColonRegex: /\ /)
+		AbstractClassWithoutAbstractMethod(enabled: false)
+		JavaIoPackageAccess(enabled: false)
+		CloneWithoutCloneable(enabled: false)
+		JUnitAssertEqualsConstantActualValue(enabled: false)
+		UnsafeImplementationAsMap(enabled: false)
+		SpaceAroundMapEntryColon(enabled: false)
+		SpaceAfterOpeningBrace(enabled: false)
+		SpaceBeforeClosingBrace(enabled: false)
+		JavaIoPackageAccess(enabled: false)
+		DuplicateMapLiteral(enabled: false)
+		DuplicateStringLiteral(enabled: false)
+		DuplicateListLiteral(enabled: false)
+		AbcMetric(enabled: false)
+		LineLength(enabled: false)
+		ClassSize(maxLines: 500)
+		MethodSize(maxLines: 56)
+		VariableName(finalRegex: /[a-zA-Z]+/)
+		MethodName(regex: /[a-zA-Z][\w\s"\(\)\#\-\:]*/)
+		DuplicateNumberLiteral(enabled: false)
+		JUnitPublicProperty(enabled: false)
+		JUnitPublicNonTestMethod(enabled: false)
+		Instanceof(enabled: false)
+		SpaceAfterClosingBrace(enabled: false)
+		BuilderMethodWithSideEffects(enabled: false)
+		UnnecessaryObjectReferences(enabled: false)
+		ThrowException(enabled: false)
+		PackageName(enabled: false)
+		ConsecutiveStringConcatenation(enabled: false)
+
+	}
+}
